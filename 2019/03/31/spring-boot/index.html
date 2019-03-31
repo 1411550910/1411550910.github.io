@@ -6,15 +6,51 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>记录生活</title>
+  <title>spring boot | 记录生活</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="记录生活">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一、Spring Boot 入门1、Spring Boot 简介 简化Spring应用开发的一个框架； 整个Spring技术栈的一个大整合； J2EE开发的一站式解决方案；  2、微服务2014，martin fowler 微服务：架构风格（服务微化） 一个应用应该是一组小型服务；可以通过HTTP的方式进行互通； 单体应用：ALL IN ONE 微服务：每一个功能元素最终都是一个可独立替换和独立升">
+<meta name="keywords" content="spring boot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spring boot">
+<meta property="og:url" content="http://yoursite.com/2019/03/31/spring-boot/index.html">
 <meta property="og:site_name" content="记录生活">
+<meta property="og:description" content="一、Spring Boot 入门1、Spring Boot 简介 简化Spring应用开发的一个框架； 整个Spring技术栈的一个大整合； J2EE开发的一站式解决方案；  2、微服务2014，martin fowler 微服务：架构风格（服务微化） 一个应用应该是一组小型服务；可以通过HTTP的方式进行互通； 单体应用：ALL IN ONE 微服务：每一个功能元素最终都是一个可独立替换和独立升">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180129151045.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180129151112.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180129224104.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180130161620.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/concrete-bindings.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/legacy.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180131220946.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180131221411.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180203181751.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/template-engine.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/2018-02-04_123955.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180211130721.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180211134506.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180226173408.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180226180347.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180226173527.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180226180504.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180228135513.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180301142915.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180302114401.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180302144835.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180302144910.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180302221835.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180303145450.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180303145531.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180303165113.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180305194443.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180306105412.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180306145727.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180306145855.png">
+<meta property="og:updated_time" content="2019-03-31T12:31:41.605Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记录生活">
+<meta name="twitter:title" content="spring boot">
+<meta name="twitter:description" content="一、Spring Boot 入门1、Spring Boot 简介 简化Spring应用开发的一个框架； 整个Spring技术栈的一个大整合； J2EE开发的一站式解决方案；  2、微服务2014，martin fowler 微服务：架构风格（服务微化） 一个应用应该是一组小型服务；可以通过HTTP的方式进行互通； 单体应用：ALL IN ONE 微服务：每一个功能元素最终都是一个可独立替换和独立升">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/31/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180129151045.png">
   
     <link rel="alternative" href="/atom.xml" title="记录生活" type="application/atom+xml">
   
@@ -144,16 +180,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-spring-boot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-spring-boot" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/31/spring-boot/">spring boot</a>
+    <h1 class="article-title" itemprop="name">
+      spring boot
     </h1>
   
 
@@ -1181,16 +1215,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/31/spring-boot/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/31/spring-boot/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/27/我的第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -1205,87 +1298,73 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/27/我的第一篇博客/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/27/我的第一篇博客/" class="archive-article-date">
-  	<time datetime="2018-03-27T09:16:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h2><p>这是我创建个人博客的第一篇文章，纪念，嘻嘻嘻</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">纪念</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/27/我的第一篇博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、Spring-Boot-入门"><span class="toc-number">1.</span> <span class="toc-text">一、Spring Boot 入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、Spring-Boot-简介"><span class="toc-number">1.1.</span> <span class="toc-text">1、Spring Boot 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、微服务"><span class="toc-number">1.2.</span> <span class="toc-text">2、微服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、环境准备"><span class="toc-number">1.3.</span> <span class="toc-text">3、环境准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、MAVEN设置；"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、MAVEN设置；</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、IDEA设置"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、IDEA设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、Spring-Boot-HelloWorld"><span class="toc-number">1.4.</span> <span class="toc-text">4、Spring Boot HelloWorld</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、创建一个maven工程；（jar）"><span class="toc-number">1.4.1.</span> <span class="toc-text">1、创建一个maven工程；（jar）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、导入spring-boot相关的依赖"><span class="toc-number">1.4.2.</span> <span class="toc-text">2、导入spring boot相关的依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、编写一个主程序；启动Spring-Boot应用"><span class="toc-number">1.4.3.</span> <span class="toc-text">3、编写一个主程序；启动Spring Boot应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、编写相关的Controller、Service"><span class="toc-number">1.4.4.</span> <span class="toc-text">4、编写相关的Controller、Service</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、运行主程序测试"><span class="toc-number">1.4.5.</span> <span class="toc-text">5、运行主程序测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、简化部署"><span class="toc-number">1.4.6.</span> <span class="toc-text">6、简化部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、Hello-World探究"><span class="toc-number">1.5.</span> <span class="toc-text">5、Hello World探究</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、POM文件"><span class="toc-number">1.5.1.</span> <span class="toc-text">1、POM文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、父项目"><span class="toc-number">1.5.1.1.</span> <span class="toc-text">1、父项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、启动器"><span class="toc-number">1.5.1.2.</span> <span class="toc-text">2、启动器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、主程序类，主入口类"><span class="toc-number">1.5.2.</span> <span class="toc-text">2、主程序类，主入口类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、使用Spring-Initializer快速创建Spring-Boot项目"><span class="toc-number">1.6.</span> <span class="toc-text">6、使用Spring Initializer快速创建Spring Boot项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、IDEA：使用-Spring-Initializer快速创建项目"><span class="toc-number">1.6.1.</span> <span class="toc-text">1、IDEA：使用 Spring Initializer快速创建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、STS使用-Spring-Starter-Project快速创建项目"><span class="toc-number">1.6.2.</span> <span class="toc-text">2、STS使用 Spring Starter Project快速创建项目</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、配置文件"><span class="toc-number">2.</span> <span class="toc-text">二、配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、配置文件"><span class="toc-number">2.1.</span> <span class="toc-text">1、配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、YAML语法："><span class="toc-number">2.2.</span> <span class="toc-text">2、YAML语法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、基本语法"><span class="toc-number">2.2.1.</span> <span class="toc-text">1、基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、值的写法"><span class="toc-number">2.2.2.</span> <span class="toc-text">2、值的写法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字面量：普通的值（数字，字符串，布尔）"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">字面量：普通的值（数字，字符串，布尔）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象、Map（属性和值）（键值对）："><span class="toc-number">2.2.2.2.</span> <span class="toc-text">对象、Map（属性和值）（键值对）：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组（List、Set）："><span class="toc-number">2.2.2.3.</span> <span class="toc-text">数组（List、Set）：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、配置文件值注入"><span class="toc-number">2.3.</span> <span class="toc-text">3、配置文件值注入</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、properties配置文件在idea中默认utf-8可能会乱码"><span class="toc-number">2.3.0.1.</span> <span class="toc-text">1、properties配置文件在idea中默认utf-8可能会乱码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、-Value获取值和-ConfigurationProperties获取值比较"><span class="toc-number">2.3.0.2.</span> <span class="toc-text">2、@Value获取值和@ConfigurationProperties获取值比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、配置文件注入值数据校验"><span class="toc-number">2.3.0.3.</span> <span class="toc-text">3、配置文件注入值数据校验</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、-PropertySource-amp-ImportResource-amp-Bean"><span class="toc-number">2.3.0.4.</span> <span class="toc-text">4、@PropertySource&amp;@ImportResource&amp;@Bean</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1、随机数"><span class="toc-number">2.3.1.</span> <span class="toc-text">1、随机数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、占位符获取之前配置的值，如果没有可以是用-指定默认值"><span class="toc-number">2.3.2.</span> <span class="toc-text">2、占位符获取之前配置的值，如果没有可以是用:指定默认值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、Profile"><span class="toc-number">2.4.</span> <span class="toc-text">5、Profile</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、多Profile文件"><span class="toc-number">2.4.1.</span> <span class="toc-text">1、多Profile文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、yml支持多文档块方式"><span class="toc-number">2.4.2.</span> <span class="toc-text">2、yml支持多文档块方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、激活指定profile"><span class="toc-number">2.4.3.</span> <span class="toc-text">3、激活指定profile</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、配置文件加载位置"><span class="toc-number">2.5.</span> <span class="toc-text">6、配置文件加载位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7、外部配置加载顺序"><span class="toc-number">2.6.</span> <span class="toc-text">7、外部配置加载顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8、自动配置原理"><span class="toc-number">2.7.</span> <span class="toc-text">8、自动配置原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、自动配置原理："><span class="toc-number">2.7.1.</span> <span class="toc-text">1、自动配置原理：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、细节"><span class="toc-number">2.7.2.</span> <span class="toc-text">2、细节</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、-Conditional派生注解（Spring注解版原生的-Conditional作用）"><span class="toc-number">2.7.2.1.</span> <span class="toc-text">1、@Conditional派生注解（Spring注解版原生的@Conditional作用）</span></a></li></ol></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#三、日志"><span class="toc-number">3.</span> <span class="toc-text">三、日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、日志框架"><span class="toc-number">3.1.</span> <span class="toc-text">1、日志框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、SLF4j使用"><span class="toc-number">3.2.</span> <span class="toc-text">2、SLF4j使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、如何在系统中使用SLF4j-https-www-slf4j-org"><span class="toc-number">3.2.1.</span> <span class="toc-text">1、如何在系统中使用SLF4j   https://www.slf4j.org</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、遗留问题"><span class="toc-number">3.2.2.</span> <span class="toc-text">2、遗留问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、SpringBoot日志关系"><span class="toc-number">3.3.</span> <span class="toc-text">3、SpringBoot日志关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、日志使用；"><span class="toc-number">3.4.</span> <span class="toc-text">4、日志使用；</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、默认配置"><span class="toc-number">3.4.1.</span> <span class="toc-text">1、默认配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、指定配置"><span class="toc-number">3.4.2.</span> <span class="toc-text">2、指定配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、切换日志框架"><span class="toc-number">3.5.</span> <span class="toc-text">5、切换日志框架</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、Web开发"><span class="toc-number">4.</span> <span class="toc-text">四、Web开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、简介"><span class="toc-number">4.1.</span> <span class="toc-text">1、简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、SpringBoot对静态资源的映射规则；"><span class="toc-number">4.2.</span> <span class="toc-text">2、SpringBoot对静态资源的映射规则；</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、模板引擎"><span class="toc-number">4.3.</span> <span class="toc-text">3、模板引擎</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、引入thymeleaf；"><span class="toc-number">4.3.1.</span> <span class="toc-text">1、引入thymeleaf；</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Thymeleaf使用"><span class="toc-number">4.3.2.</span> <span class="toc-text">2、Thymeleaf使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、语法规则"><span class="toc-number">4.3.3.</span> <span class="toc-text">3、语法规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、SpringMVC自动配置"><span class="toc-number">4.4.</span> <span class="toc-text">4、SpringMVC自动配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Spring-MVC-auto-configuration"><span class="toc-number">4.4.1.</span> <span class="toc-text">1. Spring MVC auto-configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、扩展SpringMVC"><span class="toc-number">4.4.2.</span> <span class="toc-text">2、扩展SpringMVC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、全面接管SpringMVC；"><span class="toc-number">4.4.3.</span> <span class="toc-text">3、全面接管SpringMVC；</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、如何修改SpringBoot的默认配置"><span class="toc-number">4.5.</span> <span class="toc-text">5、如何修改SpringBoot的默认配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、RestfulCRUD"><span class="toc-number">4.6.</span> <span class="toc-text">6、RestfulCRUD</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）、默认访问首页"><span class="toc-number">4.6.1.</span> <span class="toc-text">1）、默认访问首页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）、国际化"><span class="toc-number">4.6.2.</span> <span class="toc-text">2）、国际化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3）、登陆"><span class="toc-number">4.6.3.</span> <span class="toc-text">3）、登陆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4）、拦截器进行登陆检查"><span class="toc-number">4.6.4.</span> <span class="toc-text">4）、拦截器进行登陆检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5）、CRUD-员工列表"><span class="toc-number">4.6.5.</span> <span class="toc-text">5）、CRUD-员工列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#thymeleaf公共页面元素抽取"><span class="toc-number">4.6.5.1.</span> <span class="toc-text">thymeleaf公共页面元素抽取</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6）、CRUD-员工添加"><span class="toc-number">4.6.6.</span> <span class="toc-text">6）、CRUD-员工添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7）、CRUD-员工修改"><span class="toc-number">4.6.7.</span> <span class="toc-text">7）、CRUD-员工修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8）、CRUD-员工删除"><span class="toc-number">4.6.8.</span> <span class="toc-text">8）、CRUD-员工删除</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7、错误处理机制"><span class="toc-number">4.7.</span> <span class="toc-text">7、错误处理机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）、SpringBoot默认的错误处理机制"><span class="toc-number">4.7.1.</span> <span class="toc-text">1）、SpringBoot默认的错误处理机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）、如果定制错误响应："><span class="toc-number">4.7.2.</span> <span class="toc-text">2）、如果定制错误响应：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）、如何定制错误的页面；"><span class="toc-number">4.7.2.1.</span> <span class="toc-text">1）、如何定制错误的页面；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）、如何定制错误的json数据；"><span class="toc-number">4.7.2.2.</span> <span class="toc-text">2）、如何定制错误的json数据；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）、将我们的定制数据携带出去；"><span class="toc-number">4.7.2.3.</span> <span class="toc-text">3）、将我们的定制数据携带出去；</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8、配置嵌入式Servlet容器"><span class="toc-number">4.8.</span> <span class="toc-text">8、配置嵌入式Servlet容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）、如何定制和修改Servlet容器的相关配置；"><span class="toc-number">4.8.1.</span> <span class="toc-text">1）、如何定制和修改Servlet容器的相关配置；</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）、注册Servlet三大组件【Servlet、Filter、Listener】"><span class="toc-number">4.8.2.</span> <span class="toc-text">2）、注册Servlet三大组件【Servlet、Filter、Listener】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3）、替换为其他嵌入式Servlet容器"><span class="toc-number">4.8.3.</span> <span class="toc-text">3）、替换为其他嵌入式Servlet容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4）、嵌入式Servlet容器自动配置原理；"><span class="toc-number">4.8.4.</span> <span class="toc-text">4）、嵌入式Servlet容器自动配置原理；</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9、使用外置的Servlet容器"><span class="toc-number">4.9.</span> <span class="toc-text">9、使用外置的Servlet容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤"><span class="toc-number">4.9.1.</span> <span class="toc-text">步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原理"><span class="toc-number">4.9.2.</span> <span class="toc-text">原理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、Docker"><span class="toc-number">5.</span> <span class="toc-text">五、Docker</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、简介-1"><span class="toc-number">5.1.</span> <span class="toc-text">1、简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、核心概念"><span class="toc-number">5.2.</span> <span class="toc-text">2、核心概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、安装Docker"><span class="toc-number">5.3.</span> <span class="toc-text">3、安装Docker</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）、安装linux虚拟机"><span class="toc-number">5.3.0.1.</span> <span class="toc-text">1）、安装linux虚拟机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）、在linux虚拟机上安装docker"><span class="toc-number">5.3.0.2.</span> <span class="toc-text">2）、在linux虚拟机上安装docker</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、Docker常用命令-amp-操作"><span class="toc-number">5.4.</span> <span class="toc-text">4、Docker常用命令&amp;操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）、镜像操作"><span class="toc-number">5.4.1.</span> <span class="toc-text">1）、镜像操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）、容器操作"><span class="toc-number">5.4.2.</span> <span class="toc-text">2）、容器操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3）、安装MySQL示例"><span class="toc-number">5.4.3.</span> <span class="toc-text">3）、安装MySQL示例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、SpringBoot与数据访问"><span class="toc-number">6.</span> <span class="toc-text">六、SpringBoot与数据访问</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、JDBC"><span class="toc-number">6.1.</span> <span class="toc-text">1、JDBC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、整合Druid数据源"><span class="toc-number">6.2.</span> <span class="toc-text">2、整合Druid数据源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、整合MyBatis"><span class="toc-number">6.3.</span> <span class="toc-text">3、整合MyBatis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4）、注解版"><span class="toc-number">6.3.1.</span> <span class="toc-text">4）、注解版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5）、配置文件版"><span class="toc-number">6.3.2.</span> <span class="toc-text">5）、配置文件版</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、整合SpringData-JPA"><span class="toc-number">6.4.</span> <span class="toc-text">4、整合SpringData JPA</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）、SpringData简介"><span class="toc-number">6.4.1.</span> <span class="toc-text">1）、SpringData简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）、整合SpringData-JPA"><span class="toc-number">6.4.2.</span> <span class="toc-text">2）、整合SpringData JPA</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、启动配置原理"><span class="toc-number">7.</span> <span class="toc-text">七、启动配置原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、创建SpringApplication对象"><span class="toc-number">7.1.</span> <span class="toc-text">1、创建SpringApplication对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、运行run方法"><span class="toc-number">7.2.</span> <span class="toc-text">2、运行run方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、事件监听机制"><span class="toc-number">7.3.</span> <span class="toc-text">3、事件监听机制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、自定义starter"><span class="toc-number">8.</span> <span class="toc-text">八、自定义starter</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#更多SpringBoot整合示例"><span class="toc-number">9.</span> <span class="toc-text">更多SpringBoot整合示例</span></a></li>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="spring-boot" data-title="spring boot" data-url="http://yoursite.com/2019/03/31/spring-boot/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2019/03/31/spring-boot/", 
+    sourceId: "spring-boot",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+  
+  <div id="SOHUCS" sid="spring-boot"></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+
+  
+
+  
+
   
 
 
@@ -1310,8 +1389,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
