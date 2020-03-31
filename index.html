@@ -146,6 +146,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-谷歌浏览器密码提示以及记住密码自动填充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/27/谷歌浏览器密码提示以及记住密码自动填充/">谷歌浏览器密码提示以及记住密码自动填充</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/27/谷歌浏览器密码提示以及记住密码自动填充/" class="archive-article-date">
+  	<time datetime="2020-03-27T05:33:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="谷歌浏览器密码提示以及记住密码自动填充"><a href="#谷歌浏览器密码提示以及记住密码自动填充" class="headerlink" title="谷歌浏览器密码提示以及记住密码自动填充"></a>谷歌浏览器密码提示以及记住密码自动填充</h1><h2 id="HTML部分"><a href="#HTML部分" class="headerlink" title="HTML部分"></a><strong>HTML部分</strong></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-container form-group"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"red"</span>&gt;</span>*<span class="tag">&lt;/<span class="name">span</span>&gt;</span>账号<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"identifier"</span> <span class="attr">data-width</span>=<span class="string">"224px"</span> <span class="attr">databind</span>=<span class="string">'&#123;"data":"userData.userAccount","save": false&#125;'</span> <span class="attr">class</span>=<span class="string">"form-control"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">data-ui</span>=<span class="string">"input"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">data-placeholder</span>=<span class="string">"请输入账号"</span> <span class="attr">data-required-error</span>=<span class="string">"请输入账号"</span> <span class="attr">data-required</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">data-pattern</span>=<span class="string">"^[\da-zA-Z!_]&#123;5,50&#125;$"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">data-pattern-error</span>=<span class="string">"账号必须由字母,数字或_组成,并大于等于5位"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">autocomplete</span>=<span class="string">"off"</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"help-inline with-errors validate-msg-hidden"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-container form-group"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">"passwordLabel"</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"red"</span>&gt;</span>*<span class="tag">&lt;/<span class="name">span</span>&gt;</span>登入密码<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">data-width</span>=<span class="string">"224px"</span> <span class="attr">databind</span>=<span class="string">'&#123;"data":"userData.password","save": false&#125;'</span> <span class="attr">class</span>=<span class="string">"form-control"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">data-ui</span>=<span class="string">"input"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">autocomplete</span>=<span class="string">"new-password"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">data-placeholder</span>=<span class="string">"请输入密码"</span> <span class="attr">data-required-error</span>=<span class="string">"请输入密码"</span> <span class="attr">data-required</span>=<span class="string">"true"</span> <span class="attr">data-type</span>=<span class="string">"password"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item-container form-group"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">"passwordreLabel"</span> <span class="attr">class</span>=<span class="string">"item-label"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"red"</span>&gt;</span>*<span class="tag">&lt;/<span class="name">span</span>&gt;</span>确认密码<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"rePassword"</span> <span class="attr">data-width</span>=<span class="string">"224px"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">data-ui</span>=<span class="string">"input"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">autocomplete</span>=<span class="string">"new-password"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">data-placeholder</span>=<span class="string">"请输入确认密码"</span> <span class="attr">data-required-error</span>=<span class="string">"请输入确认密码"</span> <span class="attr">data-required</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">data-type</span>=<span class="string">"password"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/03/27/谷歌浏览器密码提示以及记住密码自动填充/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">谷歌</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/谷歌密码//" class="article-tag-list-link color5">谷歌密码</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/27/谷歌浏览器密码提示以及记住密码自动填充/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Could-not-open-lock-file-var-lib-dpkg-lock的解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1088,117 +1175,6 @@
 
 
   
-    <article id="post-Spring Boot 入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/01/Spring Boot 入门/">一、Spring Boot 入门</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/01/Spring Boot 入门/" class="archive-article-date">
-  	<time datetime="2019-03-01T12:18:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一、Spring-Boot-入门"><a href="#一、Spring-Boot-入门" class="headerlink" title="一、Spring Boot 入门"></a>一、Spring Boot 入门</h1><h2 id="1、Spring-Boot-简介"><a href="#1、Spring-Boot-简介" class="headerlink" title="1、Spring Boot 简介"></a>1、Spring Boot 简介</h2><blockquote>
-<p>简化Spring应用开发的一个框架；</p>
-<p>整个Spring技术栈的一个大整合；</p>
-<p>J2EE开发的一站式解决方案；</p>
-</blockquote>
-<h2 id="2、微服务"><a href="#2、微服务" class="headerlink" title="2、微服务"></a>2、微服务</h2><p>2014，martin fowler</p>
-<p>微服务：架构风格（服务微化）</p>
-<p>一个应用应该是一组小型服务；可以通过HTTP的方式进行互通；</p>
-<p>单体应用：ALL IN ONE</p>
-<p>微服务：每一个功能元素最终都是一个可独立替换和独立升级的软件单元；</p>
-<p><a href="https://martinfowler.com/articles/microservices.html#MicroservicesAndSoa" target="_blank" rel="noopener">详细参照微服务文档</a></p>
-<h2 id="3、环境准备"><a href="#3、环境准备" class="headerlink" title="3、环境准备"></a>3、环境准备</h2><p>环境约束</p>
-<p>–jdk1.8：Spring Boot 推荐jdk1.7及以上；java version “1.8.0_112”</p>
-<p>–maven3.x：maven 3.3以上版本；Apache Maven 3.3.9</p>
-<p>–IntelliJIDEA2017：IntelliJ IDEA 2017.2.2 x64、STS</p>
-<p>–SpringBoot 1.5.9.RELEASE：1.5.9；</p>
-<p>统一环境；</p>
-        
-          <a class="article-more-a" href="/2019/03/01/Spring Boot 入门/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springboot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">环境准备</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/springboot//" class="article-tag-list-link color1">springboot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/01/Spring Boot 入门/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1213,7 +1189,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 嚯哈哈
+    		&copy; 2020 嚯哈哈
     	</div>
       	<div class="footer-right">
       		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
@@ -1306,6 +1282,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
@@ -1315,14 +1299,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1339,6 +1315,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">纪念</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">谷歌</a>
               </li>
              
               <li class="article-tag-list-item">
