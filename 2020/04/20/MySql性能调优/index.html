@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/3 | 记录生活</title>
+  <title>MySql性能调优 | 记录生活</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="记录生活">
-<meta property="og:url" content="http://yoursite.com/archives/2020/03/index.html">
+  <meta name="description" content="MySql性能调优前言explian/desc可以帮助我们分析sql语句，写出高效sql语句，让mysql查询优化器可以更好的工作。   mysql查询优化器会尽可能的使用索引，优化器排除的数据行越多，mysql找到匹配数据行就越快。 用法  explain/desc + sql 1explain select * from tbl_chain_bill where billid = 6    k">
+<meta name="keywords" content="数据库,MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySql性能调优">
+<meta property="og:url" content="http://yoursite.com/2020/04/20/MySql性能调优/index.html">
 <meta property="og:site_name" content="记录生活">
+<meta property="og:description" content="MySql性能调优前言explian/desc可以帮助我们分析sql语句，写出高效sql语句，让mysql查询优化器可以更好的工作。   mysql查询优化器会尽可能的使用索引，优化器排除的数据行越多，mysql找到匹配数据行就越快。 用法  explain/desc + sql 1explain select * from tbl_chain_bill where billid = 6    k">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-04-21T14:08:52.647Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记录生活">
+<meta name="twitter:title" content="MySql性能调优">
+<meta name="twitter:description" content="MySql性能调优前言explian/desc可以帮助我们分析sql语句，写出高效sql语句，让mysql查询优化器可以更好的工作。   mysql查询优化器会尽可能的使用索引，优化器排除的数据行越多，mysql找到匹配数据行就越快。 用法  explain/desc + sql 1explain select * from tbl_chain_bill where billid = 6    k">
   
     <link rel="alternative" href="/atom.xml" title="记录生活" type="application/atom+xml">
   
@@ -144,71 +149,307 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-MySql性能调优" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/27/谷歌浏览器密码提示以及记住密码自动填充/" class="archive-article-date">
-  	<time datetime="2020-03-27T05:33:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-27</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/27/谷歌浏览器密码提示以及记住密码自动填充/">谷歌浏览器密码提示以及记住密码自动填充</a>
+    <h1 class="article-title" itemprop="name">
+      MySql性能调优
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/04/20/MySql性能调优/" class="archive-article-date">
+  	<time datetime="2020-04-20T12:29:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="MySql性能调优"><a href="#MySql性能调优" class="headerlink" title="MySql性能调优"></a>MySql性能调优</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>explian/desc可以帮助我们分析sql语句，写出高效sql语句，让mysql查询优化器可以更好的工作。<br>   mysql查询优化器会尽可能的使用索引，优化器排除的数据行越多，mysql找到匹配数据行就越快。</p>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>  explain/desc + sql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select * from tbl_chain_bill where billid = 6</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>value</th>
+<th><strong>means</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>1</td>
+<td>查询序列号</td>
+</tr>
+<tr>
+<td>select_type</td>
+<td>SIMPLE</td>
+<td>查询类型</td>
+</tr>
+<tr>
+<td>table</td>
+<td>tbl_chain_bill</td>
+<td>表或派生表名</td>
+</tr>
+<tr>
+<td>type</td>
+<td>const</td>
+<td>扫描类型</td>
+</tr>
+<tr>
+<td>possible_keys</td>
+<td>PRIMARY</td>
+<td>可能用的索引，有多个</td>
+</tr>
+<tr>
+<td>key</td>
+<td>PRIMARY</td>
+<td>实际使用索引</td>
+</tr>
+<tr>
+<td>key_len</td>
+<td>8</td>
+<td>使用的索引长度，在不损失精度下，长度越短越好</td>
+</tr>
+<tr>
+<td>ref</td>
+<td>const</td>
+<td>显示索引的哪一列被使用了</td>
+</tr>
+<tr>
+<td>rows</td>
+<td>1</td>
+<td>该语句扫描了多少行记录</td>
+</tr>
+<tr>
+<td>Extra</td>
+<td>null</td>
+<td>sql语句额外信息，如排序分组等</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><h4 id="id：表示执行select子句顺序的标识。id相同，顺序由上至下；id越大，越先执行。"><a href="#id：表示执行select子句顺序的标识。id相同，顺序由上至下；id越大，越先执行。" class="headerlink" title="id：表示执行select子句顺序的标识。id相同，顺序由上至下；id越大，越先执行。"></a>id：表示执行select子句顺序的标识。id相同，顺序由上至下；id越大，越先执行。</h4><h4 id="select-type"><a href="#select-type" class="headerlink" title="select_type"></a>select_type</h4><ul>
+<li><strong>SIMPLE</strong>：简单SELECT，不使用UNION或子查询等；</li>
+<li><strong>PRIMARY</strong>：查询中若包含任何复杂的子部分，最外层的select被标记为PRIMARY；</li>
+<li><strong>UNION</strong>：UNION中的第二个或后面的SELECT语句；</li>
+<li><strong>UNION RESULT</strong>：UNION的结果；</li>
+<li><strong>SUBQUERY</strong>：子查询中的第一个SELECT；</li>
+<li><strong>DERIVED</strong>：派生表的SELECT，FROM子句的子查询；</li>
+<li><strong>UNCACHEABLE SUBQUERY</strong>：结果集不能缓存的子查询。</li>
+</ul>
+<h4 id="table：表示数据来源于哪张表或派生表。"><a href="#table：表示数据来源于哪张表或派生表。" class="headerlink" title="table：表示数据来源于哪张表或派生表。"></a>table：表示数据来源于哪张表或派生表。</h4><h4 id="type：从上到下，性能由差到好"><a href="#type：从上到下，性能由差到好" class="headerlink" title="type：从上到下，性能由差到好"></a>type：从上到下，性能由差到好</h4><ul>
+<li><strong>ALL</strong>：从头到尾全表扫描；</li>
+<li><strong>Index</strong>：全索引树扫描，只遍历索引树；</li>
+<li><strong>Range</strong>：只检索给定的范围，需要使用一个索引来选择行，key代表使用的索引；</li>
+<li><strong>Ref</strong>：用于连接匹配的索引列不唯一时，如where bill.billNo = billDetail.billNo；</li>
+<li><strong>Eq ref</strong>：用于连接匹配的索引列是unique或者primary key时，如where bill.id = billDetail.billID；</li>
+<li><strong>const</strong>：用常数来比较primary key时吗，比如where primary key = 123；</li>
+<li><strong>system</strong>：被查询表只有一行记录，用常数来比较primary key时。</li>
+</ul>
+<h3 id="SHOW-WARNINGS"><a href="#SHOW-WARNINGS" class="headerlink" title="SHOW WARNINGS"></a>SHOW WARNINGS</h3><p>显示调优建议</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">explain select * from tbl_chain_bill where billid = 6；</span><br><span class="line">SHOW WARNINGS</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">谷歌</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/谷歌密码//" class="article-tag-list-link color5">谷歌密码</a>
+        			<a href="/categories/后端//" class="article-tag-list-link color3">后端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/后端/数据库//" class="article-tag-list-link color4">数据库</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/后端/数据库/MySQL//" class="article-tag-list-link color1">MySQL</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/20/MySql性能调优/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/04/07/前端css修改属性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端css修改属性</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySql性能调优"><span class="toc-number">1.</span> <span class="toc-text">MySql性能调优</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.0.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用法"><span class="toc-number">1.0.2.</span> <span class="toc-text">用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#分析"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#id：表示执行select子句顺序的标识。id相同，顺序由上至下；id越大，越先执行。"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">id：表示执行select子句顺序的标识。id相同，顺序由上至下；id越大，越先执行。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#select-type"><span class="toc-number">1.0.2.3.</span> <span class="toc-text">select_type</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#table：表示数据来源于哪张表或派生表。"><span class="toc-number">1.0.2.4.</span> <span class="toc-text">table：表示数据来源于哪张表或派生表。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#type：从上到下，性能由差到好"><span class="toc-number">1.0.2.5.</span> <span class="toc-text">type：从上到下，性能由差到好</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SHOW-WARNINGS"><span class="toc-number">1.0.3.</span> <span class="toc-text">SHOW WARNINGS</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="MySql性能调优" data-title="MySql性能调优" data-url="http://yoursite.com/2020/04/20/MySql性能调优/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2020/04/20/MySql性能调优/", 
+    sourceId: "MySql性能调优",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-    
+  
+  <div id="SOHUCS" sid="MySql性能调优"></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+
+  
+
+  
+
+  
 
 
           </div>
@@ -233,8 +474,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
